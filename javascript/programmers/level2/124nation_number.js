@@ -19,12 +19,21 @@
 // 4	11	9	03
 
 /*
- 1x1
- 1x2
- 1x3
- 1x1+ 3x1
- 1x2+ 3x1
- 1x3+ 3x1
+ 1 1x1
+ 2 1x2
+ 3 1x3
+ 4 1x1+ 3x1
+ 5 1x2+ 3x1
+ 6 1x3+ 3x1
+ 7 1x1+ 3x2
+ 8 1x2+ 3x2
+ 9 1x3+ 3x2
+ 10 1x1+ 3x3
+ 11 1x2+ 3x3
+ 12 1x3+ 3x3
+ 13 1x1+ 3x1 +9x1
+
+
 
  41 = 9*3 + 3*3 + 3*1 + 1*2
  */
@@ -39,6 +48,8 @@
 // 2	2
 // 3	4
 // 4	11
+
+//51 => 9*3 + 24 => 9*3 + 3*3
 (function main(){
     number = 6;
 
@@ -46,51 +57,20 @@
 })();
 
 function solution(number) {
-    // 3의 n 승으로 나눌 때 최대의 값 n을 구함
 
-    // number을 3의 n승, n-1승, n-2승 ... 0 승까지 나눔
-    // number5 = 3^5 * n + r => [].push(n)
-
-    let maxLevel = 0;
-    let maxValue = 1;
+    let sum = 0;
+    let level = 1;
+    let i = 0;
     while(true){
-        console.log(maxValue);
-        if(number > maxValue * 3){
-            maxValue *= 3;
-            maxLevel ++;
-        } else {
+        sum += level * 3;
+        console.log(`sum: ${sum} level: ${level}`);
+        if(number<sum){
             break;
         }
+        level *= 3;
+        i++;
     }
-
-    const ary = [];
-    for(maxLevel ; maxLevel >= 0 ; maxLevel--){
-        if (number == 0){
-            ary[maxLevel] = 0;
-            continue;
-        }
-
-        let multi = parseInt(number / maxValue );
-        if(multi != 0 ) {
-            let rest = number % (maxValue * multi);
-            ary[maxLevel] = multi;
-            number = rest;
-        } else {
-            ary[maxLevel] = 0;
-        }
-        maxValue = parseInt(maxValue / 3);
-        console.log(`number : ${number} maxValue : ${maxValue} multi : ${multi}`);
-        console.log(ary);
-    }
-    console.lg
-    ary.reduce((prev, current, index) => {
-        switch (current) {
-            case 0:
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-        }
-    },"")
+    console.log(i);
 }
+
+//31
