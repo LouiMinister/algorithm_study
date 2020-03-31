@@ -28,8 +28,8 @@
 const {log} = console;
 
 (function main(){
-    arr=[5,9,7,10];
-    divisor = 5;
+    const arr=[5,9,7,10];
+    const divisor = 5;
     log(solution(arr, divisor));
 })();
 

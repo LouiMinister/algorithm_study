@@ -20,12 +20,12 @@ Pyy	false
  */
 
 function solution(s){
-    var answer = true;
-    var pCnt = 0;
-    var yCnt = 0;
+    let answer = true;
+    let pCnt = 0;
+    let yCnt = 0;
 
     s = s.toUpperCase();
-    for(var i = 0; i<s.length; i++){
+    for(let i = 0; i<s.length; i++){
         if(s.charAt(i)==='P'){
             pCnt++;
         }

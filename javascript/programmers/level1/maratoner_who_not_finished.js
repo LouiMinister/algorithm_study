@@ -27,8 +27,8 @@
 
 
 function main(){
-    participant = ["marina", "josipa", "nikola", "vinko", "filipa"];
-    completion = ["josipa", "filipa", "marina", "nikola"];
+    const participant = ["marina", "josipa", "nikola", "vinko", "filipa"];
+    const completion = ["josipa", "filipa", "marina", "nikola"];
     console.log(solution(participant, completion));
 }
 function solution(participant, completion) {
