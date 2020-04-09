@@ -29,25 +29,129 @@
  2	10	[7,4,5,6]	8
  100	100	[10]	101
  100	100	[10,10,10,10,10,10,10,10,10,10]	110
+
+
+ ** 느낀점 **
+ *
+ * solution_ 이 처음 풀었던 코드이다.
+ * 답은 전부 맞았지만 테스트 5번이 시간초과되어 solution 코드로 대하였다.
+ * 수정한 부분은 도로 위의 차의 무게를 reduce 함수를 이용하여 main loop 를 돌때마다 구했던 것을 차가 다리에 올라오고 내려갈 때 직접 다른 변수로 컨트롤 하였다.체
+ *
+ *
  */
 (function main(){
 
-    const bridge_lenghth = 2;
-    const weight = 10;
-    const truck_weights = [7,4,5,6];
+    const bridge_lenghth = 100;
+    const weight = 100;
+    const truck_weights = [10,10,10,10,10,10,10,10,10,10];
 
     console.log(solution(bridge_lenghth, weight, truck_weights));
 })();
 
+
+/**
+ *
+ * 테스트 1 〉	통과 (2.64ms, 37.6MB)
+ 테스트 2 〉	통과 (51.66ms, 37.7MB)
+ 테스트 3 〉	통과 (1.82ms, 37.4MB)
+ 테스트 4 〉	통과 (11.26ms, 37.5MB)
+ 테스트 5 〉	통과 (240.02ms, 37.9MB)
+ 테스트 6 〉	통과 (37.41ms, 37.5MB)
+ 테스트 7 〉	통과 (2.29ms, 37.4MB)
+ 테스트 8 〉	통과 (1.85ms, 37.5MB)
+ 테스트 9 〉	통과 (4.41ms, 37.5MB)
+ 테스트 10 〉	통과 (1.87ms, 37.3MB)
+ 테스트 11 〉	통과 (1.82ms, 37.3MB)
+ 테스트 12 〉	통과 (1.96ms, 37.2MB)
+ 테스트 13 〉	통과 (2.26ms, 37.5MB)
+ */
 function solution(bridge_length, weight, truck_weights) {
 
-    const arrived_truck = [];
-    const ready_truck = [...truck_weights];
+    const max_weight = weight;
+    const arrived_trucks = [];
+    const bridge_trucks = new Array(bridge_length).fill(0);
+    let bridge_weight = 0;
+    const ready_trucks = [...truck_weights];
     let time = 0;
 
-    for(true){
 
+    while(true){
+        if(arrived_trucks.length == truck_weights.length){
+            break;
+        }
+        time++;
+
+        console.log(`bridge_weight : ${bridge_weight} bridge_trucks: ${bridge_trucks}`);
+        let start_truck =undefined;
+
+        if(bridge_weight + ready_trucks[0] - bridge_trucks[bridge_trucks.length-1]  <= max_weight){
+            start_truck = ready_trucks.shift();
+        } else {
+            start_truck = 0;
+        }
+        bridge_trucks.unshift(start_truck);
+        bridge_weight += start_truck;
+
+        const arrived_truck = bridge_trucks.pop();
+        if(arrived_truck !=0){
+            arrived_trucks.push(arrived_truck);
+            bridge_weight -= arrived_truck;
+        }
     }
+
+    return time;
+}
+
+
+/**
+ 테스트 1 〉	통과 (49.81ms, 37.9MB)
+ 테스트 2 〉	통과 (3822.88ms, 40.1MB)
+ 테스트 3 〉	통과 (1.90ms, 37.3MB)
+ 테스트 4 〉	통과 (726.75ms, 39.2MB)
+ 테스트 5 〉	실패 (시간 초과)
+ 테스트 6 〉	통과 (3576.73ms, 41.8MB)
+ 테스트 7 〉	통과 (18.25ms, 37.6MB)
+ 테스트 8 〉	통과 (2.35ms, 37.5MB)
+ 테스트 9 〉	통과 (10.62ms, 38MB)
+ 테스트 10 〉	통과 (2.56ms, 37.3MB)
+ 테스트 11 〉	통과 (1.82ms, 37.3MB)
+ 테스트 12 〉	통과 (2.19ms, 37.2MB)
+ 테스트 13 〉	통과 (5.53ms, 37.8MB)
+ */
+
+function solution_(bridge_length, weight, truck_weights) {
+
+    const max_weight = weight;
+    const arrived_trucks = [];
+    const bridge_trucks = new Array(bridge_length).fill(0);
+    const ready_trucks = [...truck_weights];
+    let time = 0;
+
+
+    while(true){
+        if(arrived_trucks.length == truck_weights.length){
+            break;
+        }
+        time++;
+
+        const bridge_weight = bridge_trucks.reduce((accumulate, current) => accumulate + current);
+        console.log(`bridge_weight : ${bridge_weight} bridge_trucks: ${bridge_trucks}`);
+        let start_truck =undefined;
+
+        if(bridge_weight + ready_trucks[0] - bridge_trucks[bridge_trucks.length-1]  <= max_weight){
+            start_truck = ready_trucks.shift();
+        } else {
+            start_truck = 0;
+        }
+        bridge_trucks.unshift(start_truck);
+
+        const arrived_truck = bridge_trucks.pop();
+        if(arrived_truck !=0){
+            arrived_trucks.push(arrived_truck);
+        }
+    }
+
+    return time;
 }
 
 //
