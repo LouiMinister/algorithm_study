@@ -21,11 +21,42 @@ numbers	return
 [3, 142, 2, 24, 52, 342, 5] => 52, 5 비교 : 2랑 나머지 숫자들의 첫숫자 비교 : 2 랑 5 비교
 
 
+[3, 142, 2, 24, 52, 342 ,5]
+3, 2, 142, 24, 52, 342,5
+3, 2, 24, 142, 52, 342, 5
+3, 2, 24, 52, 142, 342, 5
+3, 2, 24, 52, 142, 5, 342
+3, 24, 2, 52, 142, 5, 342
+3, 24, 52, 2, 142, 5, 342
+3, 24, 52, 2, 142 ,5, 342
+3, 24, 52, 2, 5, 142, 342
+3, 24, 52, 2, 5, 342, 142
+3, 52, 24, 2, 5, 342, 142
+3, 52, 24, 2, 5 ,342, 142
+3, 52, 24, 5, 2, 342, 142
+3, 52, 24, 5, 342, 2, 142
+3, 52, 24, 5 ,342, 2, 142
+52, 3, 24 ,5, 342, 2, 142
+52, 3, 24, 5, 342, 2, 142
+52, 3, 5, 24, 342, 2 ,142
+52, 3, 5, 342, 24, 2 ,142
+52, 3, 5, 342, 24, 2, 142
+52, 5, 3, 342, 24, 2, 142
+5, 52, 342, 3, 24, 2 ,142
+
+555, 55, 53, 52, 56
+
+56 555 55 53 52
+
+555, 55, 56, 53, 52
+555 56 55 53 52
+
+
 
 */
 
 function main(){
-    const numbers = [3, 142, 2, 24, 52, 342, 5];
+    const numbers = [0,0,0,0];
 
     console.log(solution(numbers));
 }
@@ -33,29 +64,13 @@ function solution(numbers) {
     console.log(String(3).charAt(1) == "");
 
     const s_numbers = numbers.sort((a,b)=>{
-        let index = 0;
         const aStr = String(a);
         const bStr = String(b);
-        while(true){
-            console.log(`${aStr.charCodeAt(index)} - ${bStr.charCodeAt(index)}`)
-            const aChar = aStr.charCodeAt(index);
-            const bChar = bStr.charCodeAt(index);
+        const compare = Number(aStr.concat(bStr)) - Number(bStr.concat(aStr));
+        return -compare;
 
-            let cmp =  aChar - bChar;
-
-            if(isNaN(aChar) && isNaN(bChar)){
-                return 0;
-            }
-
-            if(cmp == 0){
-                index++
-            } else {
-                return -cmp;
-            }
-        }
     });
-
     console.log(s_numbers);
-
+    return s_numbers.join('')==0 ? "0" :  s_numbers.join('') ;
 }
 main();
