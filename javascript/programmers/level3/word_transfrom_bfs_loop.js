@@ -26,86 +26,39 @@ hit	cog	[hot, dot, dog, lot, log]	0
 target인 cog는 words 안에 없기 때문에 변환할 수 없습니다.
 */
 
-class Node {
-    constructor(word, neighbor){
-        this.word = word;
-        this.neighbor = neighbor;
-    }
-}
 
 (() =>{
     const begin = "hit";
     const target = "cog";
-    const words = ["hot", "dot", "dog", "lot", "log", "cog"];
+    //const words = ["hot", "dot", "dog", "lot", "log", "cog"];
+    const words = ["hot", "dot", "dog", "lot", "log"];
 
     console.log(solution(begin, target, words));
 })()
 
-function getNeigbor(word, _candidate){
-    const candidate = [..._candidate];
-    const result = candidate.reduce((prev, current)=>{
-        if( isNeighbor(word, current) ){
-            prev.push(current)
-        } 
-        return prev;
-    },[]);
-    return result;
-}
 
 function isNeighbor(word1, word2){
-    if ( word1.length != word2.length ){ return false; }
     let diffCharCount = 0;
     for ( let i =0; i<word1.length; i++) {
         if ( word1.charAt(i) != word2.charAt(i) ){
             diffCharCount ++;
+            if(diffCharCount>1) { break; }
         }
     }
     return diffCharCount == 1 ?  true :  false ;
 }
 
-function findNodeOnAry(word, nodeAry){
-    const condition = (element) => {
-        return element.word == word;
-    }
-    return nodeAry.find(condition);
-}
-
 function solution(begin, target, words) {
-    words = [begin, ...words];
-    const nodeAry = 
-        words.reduce( (nodeAry, current_word) => {
-            const node = new Node(
-                current_word,
-                getNeigbor(current_word, words)
-            );
-            nodeAry.push(node);
-            return nodeAry
-        },[]);
-    
-    const traceStack = [];
-    let shortestWay = Number.MAX_SAFE_INTEGER;
-    console.log(shortestWay);
-
-    const dfs = (nowNode) => {
-        traceStack.push(nowNode);
-        console.log(traceStack);
-        if(nowNode.word == target){
-            if(shortestWay > traceStack.length){
-                shortestWay = traceStack.length;
-                console.log(shortestWay);
+    const traceStack = [[begin]];
+    while(traceStack.length){
+        const nowTrace = traceStack.shift();
+        for ( const word of words ){
+            if( isNeighbor( word, nowTrace[nowTrace.length-1] ) && !nowTrace.find(val => val == word) ){
+                const newTrace = [...nowTrace, word];
+                if( word === target){ return newTrace.length -1; }
+                traceStack.push( newTrace );
             }
-        } else {
-            nowNode.neighbor.forEach((neighborWord) => {
-                if( !findNodeOnAry(neighborWord, traceStack) ){
-                    dfs(findNodeOnAry(neighborWord, nodeAry));
-                }
-            });
-         }
-        
-        traceStack.pop();
-        return;
+        }
     }
-
-    dfs(nodeAry[0]);
-    return shortestWay == Math.max() ? 0 : shortestWay;
+    return 0;
 }
