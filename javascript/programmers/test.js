@@ -1,14 +1,15 @@
 
 function main(){
-    const ary = [2,1,3,4,5,6,7,8,9];
+    const ary = [1,1,1,1,1,2,1,1,1,2,1,1,2];
     solution(ary);
 }
 function solution(ary) {
-    ary = [1];
-    console.log(Boolean(ary.length));
-    ary.pop();
-    console.log(Boolean(ary.length));
-    
+    let idx =-1;
+    while(true){
+        idx= ary.indexOf(2,idx+1)
+
+        console.log(idx);
+    }
     
 }
 main();
