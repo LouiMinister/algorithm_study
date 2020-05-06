@@ -1,56 +1,35 @@
 
 /*
-스트리밍 사이트에서 장르 별로 가장 많이 재생된 노래를 두 개씩 모아 베스트 앨범을 출시하려 합니다. 노래는 고유 번호로 구분하며, 노래를 수록하는 기준은 다음과 같습니다.
+###### 문제 설명
 
-1. 속한 노래가 많이 재생된 장르를 먼저 수록합니다.
-2. 장르 내에서 많이 재생된 노래를 먼저 수록합니다.
-3. 장르 내에서 재생 횟수가 같은 노래 중에서는 고유 번호가 낮은 노래를 먼저 수록합니다.
+n개의 노드가 있는 그래프가 있습니다. 각 노드는 1부터 n까지 번호가 적혀있습니다. 1번 노드에서 가장 멀리 떨어진 노드의 갯수를 구하려고 합니다. 가장 멀리 떨어진 노드란 최단경로로 이동했을 때 간선의 개수가 가장 많은 노드들을 의미합니다.
 
-노래의 장르를 나타내는 문자열 배열 genres와 노래별 재생 횟수를 나타내는 정수 배열 plays가 주어질 때, 베스트 앨범에 들어갈 노래의 고유 번호를 순서대로 return 하도록 solution 함수를 완성하세요.
+노드의 개수 n, 간선에 대한 정보가 담긴 2차원 배열 vertex가 매개변수로 주어질 때, 1번 노드로부터 가장 멀리 떨어진 노드가 몇 개인지를 return 하도록 solution 함수를 작성해주세요.
 
 ##### 제한사항
 
-- genres[i]는 고유번호가 i인 노래의 장르입니다.
-- plays[i]는 고유번호가 i인 노래가 재생된 횟수입니다.
-- genres와 plays의 길이는 같으며, 이는 1 이상 10,000 이하입니다.
-- 장르 종류는 100개 미만입니다.
-- 장르에 속한 곡이 하나라면, 하나의 곡만 선택합니다.
-- 모든 장르는 재생된 횟수가 다릅니다.
+- 노드의 개수 n은 2 이상 20,000 이하입니다.
+- 간선은 양방향이며 총 1개 이상 50,000개 이하의 간선이 있습니다.
+- vertex 배열 각 행 [a, b]는 a번 노드와 b번 노드 사이에 간선이 있다는 의미입니다.
 
 ##### 입출력 예
 
-| genres                                | plays                      | return       |
-| ------------------------------------- | -------------------------- | ------------ |
-| [classic, pop, classic, classic, pop] | [500, 600, 150, 800, 2500] | [4, 1, 3, 0] |
+| n    | vertex                                                   | return |
+| ---- | -------------------------------------------------------- | ------ |
+| 6    | [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]] | 3      |
 
 ##### 입출력 예 설명
 
-classic 장르는 1,450회 재생되었으며, classic 노래는 다음과 같습니다.
+예제의 그래프를 표현하면 아래 그림과 같고, 1번 노드에서 가장 멀리 떨어진 노드는 4,5,6번 노드입니다.
 
-- 고유 번호 3: 800회 재생
-- 고유 번호 0: 500회 재생
-- 고유 번호 2: 150회 재생
-
-pop 장르는 3,100회 재생되었으며, pop 노래는 다음과 같습니다.
-
-- 고유 번호 4: 2,500회 재생
-- 고유 번호 1: 600회 재생
-
-따라서 pop 장르의 [4, 1]번 노래를 먼저, classic 장르의 [3, 0]번 노래를 그다음에 수록합니다.
-
-※ 공지 - 2019년 2월 28일 테스트케이스가 추가되었습니다.
+![image.png](https://grepp-programmers.s3.amazonaws.com/files/ybm/fadbae38bb/dec85ab5-0273-47b3-ba73-fc0b5f6be28a.png)
 */
 
 (() =>{
-    //const genres = ["classic", "pop", "classic", "classic", "pop"];
-    //const plays = [500, 600, 150, 800, 2500];
-
-    //const genres = ["a", "b", "c", "d", "e", "f"];
-    //const plays = [1,2,3,4,5,6];
-
-    const vertex = [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]];
+    const n = 6;
+    const edge = [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]];
     
-    console.log( solution(vertex) );
+    console.log( solution(n, edge) );
 })();
 
 
@@ -59,16 +38,46 @@ pop 장르는 3,100회 재생되었으며, pop 노래는 다음과 같습니다.
         
     ]
 */
-function solution(vertex){
+function solution(n, edge){
 
-    const graph = vertex.reduce( (graph, vertex) =>{
-        !graph.has(vertex[0]) && graph.set( vertex[0], {vertexs :[], visited: false});
-        !graph.has(vertex[1]) && graph.set( vertex[1], {vertexs :[], visited: false});
+    const graph = edge.reduce( (graph, vertex) =>{
+        !graph.has(vertex[0]) && graph.set( vertex[0], {vertexs:[], distance:Number.MAX_SAFE_INTEGER});
+        !graph.has(vertex[1]) && graph.set( vertex[1], {vertexs:[], distance:Number.MAX_SAFE_INTEGER});
         graph.get(vertex[0]).vertexs.push(vertex[1]);
         graph.get(vertex[1]).vertexs.push(vertex[0]);
         return graph;
     }, new Map());
-
     console.log(graph);
     
+    const traceStack = [[1]];
+    while(traceStack.length){
+        const nowTrace = traceStack.pop();
+        const nowNodeNum = nowTrace[nowTrace.length-1];
+        const nowNode = graph.get(nowNodeNum);
+        const nowVertexs = nowNode.vertexs;
+        const nowDistance = nowNode.distance;
+
+        if (nowDistance > nowTrace.length-1){
+            nowNode.distance = nowTrace.length-1;
+        } else {
+            continue;
+        }
+        const ableNodes = nowVertexs.filter( (vertex) =>{
+            return !nowTrace.includes(vertex)
+                && graph.get(vertex).distance >= nowTrace.length;
+        });
+        console.log(`nowDistance : ${nowDistance} len: ${nowTrace.length-1}`);
+        //console.log(graph);
+        if (ableNodes.length){
+            for (const ableNode of ableNodes){
+                traceStack.push([...nowTrace, ableNode]);
+            }
+        } 
+        console.log(traceStack);
+    }
+    //console.log(graph.entries());
+    const distances = [...graph].map( node => node[1].distance );
+    console.log([...graph]);
+    const maxDistance = Math.max(...distances);
+    return distances.filter(distance => distance === maxDistance).length;
 }
