@@ -48,10 +48,12 @@ image
 
 따라서 [0,0,1,0,0,1,1]을 return 하면 됩니다.
 */
+
+_solution = (n) =>n==1 ? [0] : [..._solution(n-1),0].concat(_solution(n-1).map(x=>1-x).reverse());
 (() =>{
     const n = 3;
     
-    console.log( solution(n) );
+    console.log( _solution(n) );
 })();
 
 
