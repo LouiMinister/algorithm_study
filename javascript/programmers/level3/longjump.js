@@ -50,8 +50,8 @@ n	result
 
 
 (()=>{
-    const n =4;
-    console.log(solutionDP(n));
+    const n =2000;
+    console.log(solutionDP2(n));
 })();
 
 
@@ -89,3 +89,12 @@ function solutionDP(n) {
     return dpFunc(n);
 }
 
+function solutionDP2(n) {
+    const dp = [0,1,2];
+    if(n<3)
+        return dp[n];
+    for(let i=3; i<=n; i++){
+        dp[i] = (dp[i-1] + dp[i-2])%1234567;
+    }
+    return dp[n];
+}
