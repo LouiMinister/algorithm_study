@@ -51,7 +51,7 @@ n	result
 
 (()=>{
     const n =4;
-    console.log(solution(n));
+    console.log(solutionDP(n));
 })();
 
 
@@ -75,5 +75,17 @@ function solution(n) {
     }
 
     return result%1234567;
+}
+
+function solutionDP(n) {
+    const dp = [,1,2];
+    const dpFunc = (n) => {
+        if (n<=2)
+            return dp[n];
+        if (!dp[n])
+            dp[n] = dpFunc(n-1) + dpFunc(n-2);
+        return dp[n];
+    };
+    return dpFunc(n);
 }
 
