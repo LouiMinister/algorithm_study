@@ -34,7 +34,8 @@
 (()=>{
     //const s = "abcdcba";
     const s ="abcdcba";
-    console.log(solution(s));
+    console.log(solution_r(s));
+    //console.log(solution(s));
 })();
 
 function solution(s)
@@ -68,5 +69,17 @@ function solution(s)
         }
     }
     return result;
+}
+
+//reverse 이용한 풀이
+function solution_r(s){
+    const len = s.length;
+    if (s === s.split("").reverse().join(""))
+        return len;
+    else {
+        const A = solution_r(s.slice(0,len-1));
+        const B = solution_r(s.slice(1,len));
+        return Math.max(A,B);
+    }
 }
 
