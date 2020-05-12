@@ -27,13 +27,16 @@ routes	return
 })();
 
 function solution(routes){
-    routes = [...routes];
-
-    return routes
-        .sort( (a,b) => {
-            return a[1]>b[1] ? 1 : 0;
-        }).reduce( (result, car, carIdx, copy) => {
+    routes = [...routes].sort((a,b)=>{
+        return a[1]-b[1];
+    });
+    const result = routes
+        .reduce( (result, car) => {
+            if (!(result.cam<=car[1] && result.cam>=car[0])) {
+                result.camNum++;
+                result.cam = car[1];
+            }
             return result;
-        },[0,[...copy]]);
-
+        },{camNum:1, cam:routes[0][1]});
+    return result.camNum;
 }
