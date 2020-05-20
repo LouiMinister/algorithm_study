@@ -33,21 +33,54 @@ baseball	return
 
 const solution = (baseball) => {
     const range = new Array(9).fill(null).map((_,i)=>`${i+1}`);
-    const join = (a,b) => 
-        [...a].reduce((aRes, aVal) =>
-            [...aRes,
-                ...b.reduce((bRes,bVal) => 
-                    [...bRes, `${aVal}${bVal}`]
-                ,[])
-            ]
-        ,[]);
-    console.log(join(join(range,range),range));
-    
-    
+    let candidates = combination(range,3);
+    candidates = candidates.filter((candidate)=>
+        isCandidate(baseball, candidate));
+    return candidates.length;
+}
+const combination = (arr, n) => {
+    const res = [];
+    const recursive = (val) => {
+        if (val.length === n){
+            res.push(val);
+            return;
+        }
+        for (const i of arr){
+            if(!val.includes(i)){
+                recursive(`${val}${i}`)
+            }
+        }
+    }
+    recursive("");
+    return res;
+}
+const swingReuslt = (swing, answer) =>  
+    swing.reduce(([ss, sb], s, si) => {
+        const [as, ab] = answer.reduce(([as, ab], a, ai) => 
+            a == s ?
+                ai == si ? 
+                    [as+1, ab] : [as, ab+1]
+                : [as,ab]
+        ,[0,0]);
+        return [ss+as, sb+ab];
+    },[0,0]);
+const isCandidate = (baseball, candidate) => {
+    for (const play of baseball){
+        const [swing, strike, ball] = play;
+        const [sRes, bRes] = swingReuslt([...new String(swing)], [...candidate]);
+        if (!(sRes == strike && bRes == ball))
+            return false 
+    }
+    return true;
 }
 
-
 (()=>{
-    const baseball = [[123, 1, 1], [356, 1, 0], [327, 2, 0], [489, 0, 1]];
+     const baseball = [[123, 1, 1], [356, 1, 0], [327, 2, 0], [489, 0, 1]];
+    //const baseball = [[123, 1, 1]];
+    //console.log(swingReuslt([2,1,3],[1,2,3]));
+    //console.log(swingReuslt([1,1,1],[1,2,3]));
+    //console.log(isCandidate(baseball,'112'));
+    //console.log("123".length);
+    //console.log(combination([1,2,3,4], 3));
     console.log(solution(baseball));
 })();
