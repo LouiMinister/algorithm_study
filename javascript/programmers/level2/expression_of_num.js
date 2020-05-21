@@ -20,7 +20,36 @@ n	result
 
 */
 
-function solution(n) {
-    var answer = 0;
-    return answer;
+const solution = (n) => 
+    twoNumAry(n).reduce((sum,val) => 
+        straightSumFrom(val) === n ? sum+1 : sum
+    , 0);
+const twoNumAry = (num) => {
+    let range = Array.from(new Array(num), (_,i) => i+1);
+    return range.reduce((res,start,i) =>
+        [...res, ...range.slice(i).reduce((res,end) => 
+            [...res, [start, end]]
+        ,[])]
+    ,[])
 }
+const straightMemo = [0,1];
+const straightSum = (n) => {
+    if (n == 0) return 0;
+    if(!straightMemo[n]){
+        straightMemo[n] = straightSum(n-1) + n;
+    }
+    return straightMemo[n];
+}
+const straightSumFrom = ([start,end]) => {
+    return straightSum(end) - straightSum(start-1);
+}
+
+
+
+(()=>{
+    const n = 15;
+    //console.log(straightSum(3));
+    //console.log(twoNumAry(10));
+    //console.log(straightSumFrom([1,5]));
+    console.log(solution(n));
+})();
