@@ -20,7 +20,7 @@ n	result
 
 */
 
-const solution = (n) => 
+const solution2 = (n) => 
     twoNumAry(n).reduce((sum,val) => 
         straightSumFrom(val) === n ? sum+1 : sum
     , 0);
@@ -32,6 +32,29 @@ const twoNumAry = (num) => {
         ,[])]
     ,[])
 }
+const solution = (n) => {
+    let res = 0;
+    for (let i = 1; i <= n; i++){
+        let sum = 0;
+        for (let j = i; j <= n ; j++){
+            sum += j;
+            if (sum > n)
+                break;
+            else if (sum === n)
+                sum ++;
+        }
+    }
+    return res;
+}
+const straightSumIs = ([start, last], n) => {
+    let sum = 0;
+    for (let i = start; i <= last; i++){
+        sum += i;
+        if (sum > n)
+            break;
+    }
+    return sum === n ? true : false;
+}
 const straightMemo = [0,1];
 const straightSum = (n) => {
     if (n == 0) return 0;
@@ -40,9 +63,13 @@ const straightSum = (n) => {
     }
     return straightMemo[n];
 }
-const straightSumFrom = ([start,end]) => {
+const straightSumFrom = ([start,end],n) => {
+    if (end > n/2){
+        return start === end ? end : 0 ;
+    }
     return straightSum(end) - straightSum(start-1);
 }
+
 
 
 
