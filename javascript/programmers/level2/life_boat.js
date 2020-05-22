@@ -19,11 +19,11 @@ people	limit	return
 [70, 80, 50]	100	3
 */
 
-const solution = (people, limit) => {
+const solution_functional = (people, limit) => {
     let numOfBoat = 0;
     people = [...people].sort((a,b)=>a-b);
     while(people.length){
-        lightMan = people.shift();
+        let lightMan = people.shift();
         for (let i = people.length-1; i >= 0 ; i--) {
             if (people[i] + lightMan <= limit){
                 people.splice(i,1);
@@ -35,8 +35,34 @@ const solution = (people, limit) => {
     return numOfBoat;
 }
 
+const solution = (people, limit) => {
+    let numOfBoat = 0;
+    const len = people.length;
+    people = [...people].sort((a,b)=>a-b);
+    for (let i = 0; i < len; i++){
+        if (people[i] === -1) continue;
+        for (let j = len; j > i-1; j--){
+            console.log(`${people} ${i} ${j}`);
+            if (people[j] === -1) continue;
+            else if (people[i] + people[j] <=limit ){
+                console.log(`1 : ${i} ${j} ${people[i]} ${people[j]}`);
+                people[i] = -1;
+                people[j] = -1;
+                numOfBoat++;
+                break;
+            } else if (j === i+1) {
+                console.log(`2 : ${i} ${j} ${people[i]} ${people[j]}`);
+                people[i] = -1;
+                numOfBoat++;
+                break;
+            }
+        }
+    }
+    return numOfBoat;
+}
+
 (()=>{
-    const people = [3];
+    const people = [10,20,30,40,50,60,70,80,90];
     const limit = 100;
     console.log(solution(people,limit));
 })();
