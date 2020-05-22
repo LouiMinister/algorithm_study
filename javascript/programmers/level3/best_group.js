@@ -49,3 +49,21 @@
 |      |      |      |
 |      |      |      |
 */
+
+const solution = (n, s) => {
+    if(s<n) return [-1];
+    const criteria = parseInt(s/n);
+    return result = Array.from(new Array(n),(v,i) =>
+        i < s - criteria*n ? criteria+1 : criteria)
+        .reverse();
+}
+
+const solution_s=(n,s)=>s>=n?Array.from(new Array(n),(v,i)=>i<s-parseInt(s/n)*n?parseInt(s/n)+1:parseInt(s/n)).reverse():[-1];
+
+
+(()=>{
+    const n = 2;
+    const s = 9;
+    console.log(solution(n,s));
+    console.log(solution_s(n,s));
+})();
