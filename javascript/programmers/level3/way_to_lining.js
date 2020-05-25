@@ -21,9 +21,30 @@ n	k	result
 문제의 예시와 같습니다.
 */
 
+const solution = (n, k) => {
+    var answer = [];
+    return answer;
+}
 
+const swapPermutation = (array) => {
+    const result = [];
+    const recur = (array, [a,b]) => {
+        array = [...array];
+        for (let i = a; i <= b ; i++){
+            const cache = array[a];
+            array[a] = array[i];
+            array[i] = cache;
+            console.log(`${array} ${a} ${b}`);
+            a+1 === b ? result.push([...array]) : recur(array, [a+1,b]);
+        }
+    }
+    recur(array, [0, array.length-1]);
+    return result;
+}
 
-
+(()=>{
+    console.log(swapPermutation([1,2,3]));
+})();
 
 
 
