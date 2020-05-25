@@ -23,9 +23,25 @@ n=1일 때, 남은 일의 작업량이 [2,1,2]라면 야근 지수를 최소화�
 
 
 
+const solution = (n, works) => {
+    works = works.sort((a,b) => b-a)
+    while (n > 0){
+        for (let i = 0; i < works.length; i++){
+            if (i === works.length-1 || works[i] > works[i+1]){
+                works[i]--;
+                n--;
+                break;
+            }
+        }
+    }
+    return works.reduce((sum, val) => val >= 0 ? sum + val * val : sum, 0);
+}
 
-
-
+(()=>{
+    const works = [1, 2, 3];
+    const n = 2;
+    console.log(solution(n,works));
+})();
 
 
 
