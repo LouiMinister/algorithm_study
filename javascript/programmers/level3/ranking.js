@@ -30,9 +30,65 @@ n명의 권투선수가 권투 대회에 참여했고 각각 1번부터 n번까�
 [[[2,3],[4,5]],[[1,5],[3,6]]
 */
 
+const solution = (n, results) => {
+    let table = newTable(n);
+    for (const result of results){
+        table = setTable(result, table);
+    }
+    return numOfFilledRow(calculate(table));
+}
+const numOfFilledRow = table => 
+    table.reduce((sum, row) => {
+        for (const val of row) {
+            if (val === null) return sum;
+        }
+        return sum + 1;
+    }, 0);
+
+const calculate = table => {
+    let recursive = false;
+    const result = table.reduce((acc, row) => {
+        const winLose = row.reduce((winLose, val, idx) => {
+            if (val === 1 ) winLose[0].push(idx+1);
+            if (val === -1) winLose[1].push(idx+1);
+            return winLose; 
+        }, [[],[]]);
+        for (const win of winLose[0]){
+            for (const lose of winLose[1]){
+                if (acc[lose-1][win-1] === null) recursive = true;
+                acc[lose-1][win-1] =  1;
+                acc[win-1][lose-1] = -1;
+            }
+        }
+        return acc;
+    },[...table].map(val => [...val]));
+    return recursive === true ? calculate(result) : result;
+}
+const newTable = (n) => {
+    const table = new Array(n).fill(null).map(_=>new Array(n).fill(null));
+    for (let i = 0; i < table.length; i++){
+        table[i][i] = 0;
+    }
+    return table;
+}
+const setTable = ([win, loose], table) => {
+    table = [...table].map(val => [...val]);
+    table[win-1][loose-1] = 1;
+    table[loose-1][win-1] = -1;
+    return table;
+}
 
 (()=>{
     const n = 5;
     const results =  [[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]];
+    //const results =  [[1, 2], [2, 4], [4, 3], [3, 5], [2, 5]];
+    //console.log(setTable([1,2],new Array(6).fill(new Array(6))));
     console.log(solution(n,results));
+    // console.log(calculate([
+    //     [ 0, 1, null, null, null ],
+    //     [ -1, 0, -1, -1, 1 ],
+    //     [ null, 1, 0, -1, null ],
+    //     [ null, 1, 1, 0, null ],
+    //     [ null, -1, null, null, 0 ]
+    //   ]));
 })();
