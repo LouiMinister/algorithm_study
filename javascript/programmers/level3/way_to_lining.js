@@ -22,8 +22,8 @@ n	k	result
 */
 
 const solution = (n, k) => {
-    var answer = [];
-    return answer;
+    const ary = Array(n).fill(null).map((_,i)=>i+1)
+    return serialSwap(ary, nthPermutation(k, n));
 }
 
 const swapPermutation = (array) => {
@@ -41,9 +41,38 @@ const swapPermutation = (array) => {
     recur(array, [0, array.length-1]);
     return result;
 }
+const serialSwap = (array, order) => {
+    array = [...array];
+    for (let i = 0; i < order.length; i++){
+        const cache = array[i];
+        array[i] = array[i + order[i]];
+        array[i + order[i]] = cache;
+    }
+    return array;
+}
+const nthPermutation = (val, n) => {
+    const orderAry = [];
+    const recur = (val, n) => {
+        const nFac = factorial(n);
+        orderAry.push(Math.floor(val/nFac));
+        if (n === 1 ) return;
+        recur(val%nFac, n-1);
+    }
+    recur(val-1, n-1);
+    console.log(orderAry);
+    return orderAry;
+}
+const facMemo = [1,1];
+const factorial = n => {
+    if (!facMemo[n]) 
+        facMemo[n] = n * factorial(n-1);
+    return facMemo[n];
+}
 
 (()=>{
-    console.log(swapPermutation([1,2,3]));
+    //console.log(swapPermutation([1,2,3]));
+    //console.log(nthPermutation([1,2,3,4],24,4));
+    console.log(solution(3,5));
 })();
 
 
