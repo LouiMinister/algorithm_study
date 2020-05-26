@@ -25,7 +25,6 @@ const solution = (n, k) => {
     const ary = Array(n).fill(null).map((_,i)=>i+1)
     return serialSwap(ary, nthPermutation(k, n));
 }
-
 const serialSwap = (array, order) => {
     for (let i = 0; i < order.length; i++){
         const cache = array[i];
@@ -53,10 +52,24 @@ const factorial = n => {
     return facMemo[n];
 }
 
+//----------------------------------------------------------------
+
+const solution_v2 = (n, k) => {
+    const ary = Array(n).fill(null).map((_,i)=>i+1);
+    return serialSwap_v2(ary, nthPermutation(k, n));
+}
+const serialSwap_v2 = (array, order) => {
+    const result = [];
+    array = [...array];
+    while(order.length > 0){
+        const o = order.shift();
+        result.push(array[o]); 
+        array.splice(o,1);
+    }
+    return [...result, array.pop()];
+}
 (()=>{
-    //console.log(swapPermutation([1,2,3]));
-    //console.log(nthPermutation(24,4));
-    console.log(solution(4,13));
+    console.log(solution_v2(4,16));
 })();
 
 
