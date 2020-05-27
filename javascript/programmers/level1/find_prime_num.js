@@ -19,8 +19,24 @@ n	result
 1부터 5 사이의 소수는 [2,3,5] 3개가 존재하므로 3를 반환
  */
 
-function solution(n) {
-    var answer = 0;
-    return answer;
-}
+const solution = (n) => {
+    let res = 0;
+    for(let i = 2; i <= n; i++){
+        if (isPrime(i)) {
+            res++;
+        }
+    }
+    return res;
+};
+const isPrime = (n) => {
+    if (n<2) return false;
+    for (let i =2; i <= n/2; i++){
+        if (n % i === 0) return false;
+    }
+    return true;
+};
 
+(()=>{
+    const n = 7
+    console.log(solution(n));
+})();
