@@ -28,6 +28,19 @@ const solution = (n) => {
     }
     return res;
 };
+const solution_adv = (n) => {
+    const primes = [false, false, ...Array(n-1).fill(true)];
+    for(let i = 2; i <= n; i++){
+        if (primes[i] === false) continue;
+        for(let j = 2; j*i <= n ; j++){
+            console.log(j*i);
+            primes[j*i] = false;
+        }
+    }
+    console.log(primes);
+    return primes.filter(val=>val===true).length;
+}
+
 const isPrime = (n) => {
     if (n<2) return false;
     for (let i =2; i <= n/2; i++){
@@ -37,6 +50,6 @@ const isPrime = (n) => {
 };
 
 (()=>{
-    const n = 7
-    console.log(solution(n));
+    const n = 50
+    console.log(solution_adv(n));
 })();
