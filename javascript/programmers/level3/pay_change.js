@@ -16,9 +16,47 @@ n은 100,000 이하의 자연수입니다.
 화폐 단위는 100종류 이하입니다.
 모든 화폐는 무한하게 있다고 가정합니다.
 정답이 커질 수 있으니, 1,000,000,007로 나눈 나머지를 return 해주세요.
+
+n = 7
+money = [3,5,7];
+
+7,5,3
+
+7=>7
+5=>5 2보다 작은 수 없으므로 불가능
+3 => 3, 4 => 3, 3
+
+처음에 한 수를 뽑고 다음에 수를 뽑는데 이 전에 뽑은 수보다 작은 수여야함.
+결국 다한 값이 합친 값과 만족되면 리턴
+
+
+
 */
 
-const solution = (n, mondey) => {
-    var answer = 0;
-    return answer;
+const solution = (n, money) => {
+    money = money.sort((a,b)=>b-a);
+    let numOfCases = 0;
+
+    const recur = (rest, index) => {
+        console.log(`${rest} ${index}`);
+        for(let i = index; i < money.length; i++){
+            if (rest === money[i]){
+                console.log(`when correct ${rest} ${i}`);
+                numOfCases++;
+                continue;
+            } else if (rest > money[i]){
+                recur(rest-money[i], i);
+            } else {    // rest < money[i]
+                continue;
+            }
+        }
+    }
+    recur(n, 0);
+    return numOfCases;
 }
+
+(()=>{
+    const n = 5;
+    const money = [1,2,5];
+    console.log(solution(n,money));
+})();
