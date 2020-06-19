@@ -30,42 +30,51 @@ cache miss일 경우 실행시간은 5이다.
 
 
 class Cache {
-	constructor(cacheSize) {
-        this.ary = [];
+	constructor(memorySize) {
+        this.memory = [];
+        this.memorySize = memorySize;
         this.TIME_HIT = 1;
         this.TIME_MISS = 5;
-		this.cacheSize = cacheSize;
-		this.input = this.input.bind(this);
-	}
+        this.input = this.input.bind(this);
+        this.isMemoryFull = this.isMemoryFull.bind(this);
+        this.clearMemoryAt = this.clearMemoryAt.bind(this);
+    }
+    isMemoryFull() {return this.memory.length === this.memorySize;}
+    clearMemoryAt(index) {this.memory.splice(index,1);}
 	input(data) {
-        data = data.toUpperCase();
-		if (this.ary.length < this.cacheSize){
-            this.ary.push(data);
-			return this.TIME_MISS;
-        }
-        const index = this.ary.indexOf(data);
-		if (index >= 0){
-			this.ary.splice(index, 1);
-            this.ary.push(data);
-			return this.TIME_HIT;
-		} else {
-			this.ary.shift();
-            this.ary.push(data);
-			return this.TIME_MISS;
+        if (this.memorySize === 0){
+            return this.TIME_MISS;
 		}
+		data = data.toUpperCase();
+        const dataIndex = this.memory.indexOf(data);
+        if (dataIndex >= 0){
+            this.clearMemoryAt(dataIndex);
+            this.memory.push(data);
+            return this.TIME_HIT
+        } else {
+            if (this.isMemoryFull()){
+                this.memory.shift();
+            } 
+            this.memory.push(data);
+            return this.TIME_MISS;
+        }
 	}
 }
 const solution = (cacheSize, cities) => {
 	const cache = new Cache(cacheSize);
 	return cities.reduce((acc,val) => {
-		return acc + cache.input(val);
+        const temp = cache.input(val);
+        console.log(cache.isMemoryFull());
+        console.log(`${val} ${temp}`);
+		return acc + temp;
 	},0);
-}
+};
 (() => {
-     const cacheSize = 0;
+     const cacheSize = 2;
     //const cities = ["Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul"];
     //const cities = ["Jeju","Pangyo","Seoul","NewYork","LA","Jeju","Pangyo","Seoul","NewYork","LA"];
-    const cities = ["Jeju", "Pangyo", "Seoul", "NewYork", "LA"];
+	//const cities = ["Jeju", "Pangyo", "Seoul", "NewYork", "LA"];
+	const cities =  ["Jeju", "Pangyo", "NewYork", "newyork"];
 	console.log(solution(cacheSize, cities));
 })();
 
