@@ -12,46 +12,18 @@
 경우의 수가 많아 질 수 있으므로, 경우의 수를 1,000,000,007으로 나눈 나머지를 return해주세요.
 */
 
-(function main(){
-    n = 6;
 
-    console.log(solution(n));
+const memo = [0,1,2];
+const solution = (n) => {
+    for(let i = 1; i <= n; i++){
+        if (!memo[i]){
+            memo[i] = (memo[i-1] + memo[i-2])%1000000007;
+        } 
+    }
+    return memo[n];
+}
+
+(()=>{
+    console.log(solution(5));
 })();
 
-function solution(n) {
-    const param_n = n;
-
-    const number_of_case_by_num_of_onetwo = [];
-    for(let number_of_2=0; number_of_2 <= param_n/2; number_of_2++){
-        const number_of_1 = param_n - number_of_2 * 2;
-        const case_by_num_of_onetwo = new Map()
-            .set(1,number_of_1)
-            .set(2,number_of_2);
-        number_of_case_by_num_of_onetwo.push(case_by_num_of_onetwo);
-    }
-
-    const factorial_memo_ary = [];
-    const _factorial = (n) => factorial(n, factorial_memo_ary);
-    console.log(number_of_case_by_num_of_onetwo);
-    const number_of_case = number_of_case_by_num_of_onetwo
-        .reduce( (sum_of_case, current_case) => {
-            const number_of_1 = current_case.get(1);
-            const number_of_2 = current_case.get(2);
-            const current_number_of_case = 
-                _factorial(number_of_1 + number_of_2) /
-                (_factorial(number_of_1) * _factorial(number_of_2));
-            console.log(current_number_of_case)
-            sum_of_case += current_number_of_case;
-            return sum_of_case;
-        },0);
-
-    return number_of_case;
-}
-
-function factorial(n, memo_ary){
-    if (n == 0 || n == 1)
-        return 1;
-    if (memo_ary[n] > 0)
-        return memo_ary[n];
-    return memo_ary[n] = factorial(n-1, memo_ary) * n;
-}

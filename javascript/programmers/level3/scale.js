@@ -59,12 +59,24 @@ weight	return
 sumAry = [[1], [1,2], [2,3,4], [3,5,6,7], [6,9,11,12,13]]
 
  */
+
+const solution = (weight) => {
+    weight.sort((a,b) => a-b);
+    let sum = 0;
+    for(const val of weight){
+        if (sum + 1 >= val){
+            sum += val;
+        }
+        else { 
+            break;
+        }
+    }
+    return sum+1;
+}
+
+
 (() => {
     const weight = [3, 1, 6, 2, 7, 30, 1];
     console.log(solution(weight));
+    
 })();
-
-function solution(weight) {
-    weight = weight.sort((a,b) => a-b);
-    [...weight]
-}
