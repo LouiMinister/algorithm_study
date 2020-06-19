@@ -29,3 +29,43 @@ cache miss일 경우 실행시간은 5이다.
 */
 
 
+class Cache {
+	constructor(cacheSize) {
+        this.ary = [];
+        this.TIME_HIT = 1;
+        this.TIME_MISS = 5;
+		this.cacheSize = cacheSize;
+		this.input = this.input.bind(this);
+	}
+	input(data) {
+        data = data.toUpperCase();
+		if (this.ary.length < this.cacheSize){
+            this.ary.push(data);
+			return this.TIME_MISS;
+        }
+        const index = this.ary.indexOf(data);
+		if (index >= 0){
+			this.ary.splice(index, 1);
+            this.ary.push(data);
+			return this.TIME_HIT;
+		} else {
+			this.ary.shift();
+            this.ary.push(data);
+			return this.TIME_MISS;
+		}
+	}
+}
+const solution = (cacheSize, cities) => {
+	const cache = new Cache(cacheSize);
+	return cities.reduce((acc,val) => {
+		return acc + cache.input(val);
+	},0);
+}
+(() => {
+     const cacheSize = 0;
+    //const cities = ["Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul"];
+    //const cities = ["Jeju","Pangyo","Seoul","NewYork","LA","Jeju","Pangyo","Seoul","NewYork","LA"];
+    const cities = ["Jeju", "Pangyo", "Seoul", "NewYork", "LA"];
+	console.log(solution(cacheSize, cities));
+})();
+
