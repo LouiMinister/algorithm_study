@@ -11,5 +11,8 @@
   "directories": {
     "test": "test"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
 }
