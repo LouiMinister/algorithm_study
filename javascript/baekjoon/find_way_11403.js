@@ -55,17 +55,7 @@ const getReachableGraph = (graph) => {
 	const lines = await readLines();
 	const input = await readLines(lines);
     const graph = input.map((val)=>val.split(' ').map(val=>Number(val)));
-    const str = graph.map(val=>val.join(' ')).join('\n');
-    console.log(getReachableGraph(graph));
+    const res = getReachableGraph(graph);
+    const str = res.map(val=>val.join(' ')).join('\n');
     console.log(str);
 })();
-const graph = [
-				[0,0,0,1,0,0,0],
-				[0,0,0,0,0,0,1],
-				[0,0,0,0,0,0,0],
-				[0,0,0,0,1,1,0],
-				[1,0,0,0,0,0,0],
-				[0,0,0,0,0,0,1],
-				[0,0,1,0,0,0,0],
-			  ];
-console.log(getReachableGraph(graph));
