@@ -16,7 +16,29 @@ n	m	return
 자연수 2와 5의 최대공약수는 1, 최소공배수는 10이므로 [1, 10]을 리턴해야 합니다.
 */
 
-function solution(n, m) {
-    var answer = [];
-    return answer;
+// 유클리드 호제법 이용
+
+function solution(a, b) {
+    const mul = a*b;
+    while(b!=0){
+        const r = a%b;
+        a = b;
+        b = r;
+    }
+    return [a,mul/a];
 }
+
+function gdc(a, b) {
+    while(b!=0){
+        const r = a%b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+function lmc(a,b) {
+    return a*b/gdc(a,b);
+}
+
+console.log(solution(15,10));
