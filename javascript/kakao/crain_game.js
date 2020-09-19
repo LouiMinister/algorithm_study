@@ -35,3 +35,49 @@ board	moves	result
 
 crane_game_104.jpg
 */
+
+
+
+function solution(board, moves) {
+    let res = 0;
+    let bucket = [];
+    for (const move of moves){
+        let doll;
+        let score = 0;
+        ({board, doll} = pick(board, move));
+        if (doll != 0){
+            ({bucket, score} = drop(bucket, doll));
+            res += score;
+        }
+    }
+    return res;
+}
+function pick(board, line){
+    const index = line-1;
+    let doll = 0;
+
+    for(let floor = 0; floor < board.length; ++floor){
+        const target = board[floor][index];
+        if (target != 0){
+            board[floor][index] = 0;
+            doll = target;
+            break;
+        }
+    }
+    return {board, doll};
+}
+function drop(bucket, doll){
+    let score = 0;
+    bucket = [...bucket];
+    if (bucket[bucket.length-1] == doll){
+        bucket.pop();
+        score += 2;
+    } else {
+        bucket.push(doll);
+    }
+    return {bucket, score};
+}
+
+console.log(pick([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]], 5));
+console.log(drop([1], 2));
+console.log(solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]],	[1,5,3,5,1,2,1,4]))
