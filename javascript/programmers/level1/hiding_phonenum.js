@@ -11,3 +11,13 @@ phone_number	return
 01033334444	*******4444
 027778888	*****8888
 */
+
+const solution = (phone_number) =>
+    phone_number
+    .split('')
+    .map((char,idx) => idx < phone_number.length-4 ? '*' : char)
+    .join('');
+
+const solution2 = (phone_number) => phone_number.replace(/\d(?=\d{4})/g,'*');
+console.log(solution("01033334444"));
+console.log(solution2("01033334444"));
