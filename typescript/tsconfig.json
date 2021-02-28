@@ -3,7 +3,8 @@
       "strict": true,
       "target": "ES6",
       "lib": ["ES2015", "DOM"],
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "outDir": "./dist"
     },
     "include": [
       "./**/*.ts"
