@@ -4,7 +4,7 @@
 using namespace std;
 
 bool *logic(int n) {
-  bool primes[n + 1];
+  bool *primes = new bool[n + 1]();
   for (int i = 2; i < n + 1; i++) {
     primes[i] = true;
   }
@@ -18,11 +18,9 @@ bool *logic(int n) {
   return primes;
 }
 
-int main(int n
-
-) {
+int main(void) {
   // input 값
-  n = 100;
+  int n = 100;
   bool *result = logic(n);
 
   // 출력
