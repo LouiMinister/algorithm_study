@@ -1,5 +1,18 @@
 {
   "files.associations": {
-    "vector": "cpp"
+    "vector": "cpp",
+    "__string": "cpp",
+    "deque": "cpp",
+    "exception": "cpp",
+    "functional": "cpp",
+    "istream": "cpp",
+    "locale": "cpp",
+    "map": "cpp",
+    "memory": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "string": "cpp",
+    "utility": "cpp",
+    "set": "cpp"
   }
 }
