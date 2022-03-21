@@ -14,5 +14,6 @@
     "string": "cpp",
     "utility": "cpp",
     "set": "cpp"
-  }
+  },
+  "java.project.sourcePaths": ["java"]
 }
