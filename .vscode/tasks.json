@@ -9,10 +9,7 @@
         "-fdiagnostics-color=always",
         "-g",
         "-std=c++17",
-        // "${file}",
-        "${fileDirname}/*.cpp",
-        // "${fileDirname}/*.cc",
-        //"${fileDirname}\\**.h",
+        "${file}",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}"
       ],

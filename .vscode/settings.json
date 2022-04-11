@@ -13,7 +13,13 @@
     "ostream": "cpp",
     "string": "cpp",
     "utility": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "bitset": "cpp",
+    "limits": "cpp",
+    "ratio": "cpp",
+    "ios": "cpp",
+    "queue": "cpp",
+    "iostream": "cpp"
   },
   "java.project.sourcePaths": ["java"]
 }
