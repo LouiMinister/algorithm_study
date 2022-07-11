@@ -6,12 +6,14 @@
 #include <vector>
 
 using namespace std;
+const long long MININF = LLONG_MIN / 10;
+const long long MAXINF = LLONG_MAX / 10;
 
 vector<pair<int, int>> adj[501]; // {node ,cost}
 int N, E;
 
 vector<long long> bellmanFord(int src) {
-  vector<long long> res(N + 1, LLONG_MAX);
+  vector<long long> res(N + 1, MAXINF);
   res[src] = 0;
 
   bool updated;
@@ -21,8 +23,7 @@ vector<long long> bellmanFord(int src) {
       for (int j = 0; j < adj[nowNode].size(); j++) {
         int toNode = adj[nowNode][j].first;
         int edgeCost = adj[nowNode][j].second;
-        if (res[nowNode] ==
-            LLONG_MAX) // 기존 노드가 시작점과 연결되지 않는 경우
+        if (res[nowNode] == MAXINF) // 기존 노드가 시작점과 연결되지 않는 경우
           continue;
         if (res[toNode] > res[nowNode] + edgeCost) {
           res[toNode] = res[nowNode] + edgeCost;

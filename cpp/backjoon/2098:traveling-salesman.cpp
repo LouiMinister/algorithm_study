@@ -1,51 +1,41 @@
-#include <algorithm>
-#include <cmath>
+#include <cstring>
 #include <iostream>
+#define INF 999999999
+#define MAX 16
+#define UNVISITED -1
 using namespace std;
 
-int path[16][16]; // distance i -> j
-int minDistance[(1 << 16)][16];
 int N;
-int maxV = 10000;
-int allVisited;
+int w[MAX][MAX];
+int dp[MAX][1 << MAX];
 
-int dfs(int visited, int cur) {
-  if (visited == allVisited) { // 전부 방문했을 경우
-    if (path[cur][0] != 0) {
-      return path[cur][0];
-    } else {
-      return maxV;
-    }
-  }
-
-  int cost = minDistance[visited][cur];
-  if (cost != -1) {
-    return cost;
-  } else {
-    minDistance[visited][cur] = maxV;
-  }
-
-  for (int i = 0; i < N; i++) {
-    int z = ~visited;
-    int a = ~visited & (1 << i);
-    if ((~visited & (1 << i)) && (path[cur][i] != 0)) {
-      int nextVisited = visited | (1 << i);
-      minDistance[visited][cur] =
-          min(minDistance[visited][cur], dfs(nextVisited, cur) + path[cur][i]);
-    }
-  }
-  return minDistance[visited][cur];
+void input() {
+  cin >> N;
+  for (int i = 0; i < N; ++i)
+    for (int j = 0; j < N; ++j)
+      cin >> w[i][j];
+  memset(dp, UNVISITED, sizeof(dp));
 }
 
-int main() {
-  cin >> N;
-  for (int i = 0; i < N; i++) {
-    for (int j = 0; j < N; j++) {
-      cin >> path[i][j];
-    }
-  }
-  memset(minDistance, -1, sizeof(minDistance));
-  allVisited = (1 << N) - 1;
+int dfs(int start, int end) {
+  if (dp[start][end] != UNVISITED)
+    return dp[start][end];
 
-  cout << dfs(1, 0) << endl;
+  if (end == (1 << N) - 1) {
+    if (w[start][0] != 0)
+      return w[start][0];
+    return INF;
+  }
+  dp[start][end] = INF;
+  for (int i = 0; i < N; ++i) {
+    if (end & (1 << i) || w[start][i] == 0)
+      continue;
+    dp[start][end] = min(dp[start][end], dfs(i, end | (1 << i)) + w[start][i]);
+  }
+  return dp[start][end];
+}
+int main() {
+  input();
+  cout << dfs(0, 1) << endl;
+  return 0;
 }

@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-int a[10] = {13, 7, 2, 7, 3, 8, 1, 7, 13, 14};
+int a[10] = {3, 3, 3};
 
 void QuickSort(int a[], const int left, const int right) {
   if (left >= right)
@@ -25,7 +25,7 @@ void QuickSort(int a[], const int left, const int right) {
 }
 
 int main() {
-  QuickSort(a, 0, 10 - 1);
+  QuickSort(a, 0, 3 - 1);
   for (int v : a)
     cout << v << ' ';
 }
