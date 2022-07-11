@@ -19,7 +19,17 @@
     "ratio": "cpp",
     "ios": "cpp",
     "queue": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "type_traits": "cpp",
+    "variant": "cpp",
+    "stdexcept": "cpp",
+    "iosfwd": "cpp",
+    "stack": "cpp",
+    "cmath": "cpp",
+    "iterator": "cpp",
+    "__config": "cpp",
+    "tuple": "cpp"
   },
-  "java.project.sourcePaths": ["java"]
+  "java.project.sourcePaths": ["java"],
+  "C_Cpp.errorSquiggles": "Disabled"
 }
