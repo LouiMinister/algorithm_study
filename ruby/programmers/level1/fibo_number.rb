@@ -1,12 +1,9 @@
 def solution(n)
-  cache = [0, 1]
-  def fibo(n)
+  $cache = [0, 1]
 
-    if !cache[n]
-      cache[n] = fibo(n-1) + fibo(n-2)
-    end
-    return cache[n]
+  for i in 2..n
+    $cache[i] = (($cache[i-1]) + ($cache[i-2])) % 1234567
   end
-
-  return fibo(n)
+  $cache[n]
 end
+puts solution 100
