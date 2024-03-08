@@ -8,16 +8,7 @@ for i in range(3):
     in_row = list(map(int, input().split()))
     for j in range(3):
         grid[i][j] = in_row[j]
-
-def print_grid():
-    global grid
-    for i in range(BOUND):
-        if grid[i][0] == 0: break
-        for j in range(BOUND):
-            if grid[i][j] == 0: break
-            print(grid[i][j], end=' ')
-        print('')
-
+        
 width, height = 3, 3
 time = 0
 while True:

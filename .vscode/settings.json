@@ -31,5 +31,6 @@
     "tuple": "cpp"
   },
   "java.project.sourcePaths": ["java"],
-  "C_Cpp.errorSquiggles": "Disabled"
+  "C_Cpp.errorSquiggles": "Disabled",
+  "cSpell.words": ["popleft"]
 }

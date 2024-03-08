@@ -11,8 +11,12 @@ while l_idx < r_idx:
     if abs(slts[l_idx] + slts[r_idx]) < min_sum:
         min_sum = abs(slts[l_idx] + slts[r_idx])
         res = (slts[l_idx], slts[r_idx])
-    if abs(slts[l_idx + 1] + slts[r_idx]) < abs(slts[l_idx] + slts[r_idx - 1]):
-        l_idx += 1
-    else:
+    # if abs(slts[l_idx + 1] + slts[r_idx]) < abs(slts[l_idx] + slts[r_idx - 1]):
+    #     l_idx += 1
+    # else:
+    #     r_idx -= 1
+    if abs(slts[l_idx] + slts[r_idx - 1]) < abs(slts[l_idx + 1] + slts[r_idx]):
         r_idx -= 1
+    else:
+        l_idx += 1
 print(*res)

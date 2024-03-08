@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b4148c-b4db-4eb6-b74a-75f9ec2e095f" name="Changes" comment="설정파일" />
+    <list default="true" id="22b4148c-b4db-4eb6-b74a-75f9ec2e095f" name="Changes" comment="solve:python:2805:cutting-tree">
+      <change afterPath="$PROJECT_DIR$/backjoon/7569:tomato.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codetree/code-tree-bread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codetree/santa-gift-factory2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backjoon/1697:hide-seek.py" beforeDir="false" afterPath="$PROJECT_DIR$/backjoon/1697:hide-seek.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backjoon/17140:double-array-and-calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/backjoon/17140:double-array-and-calc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backjoon/20055:robot_on_convaier.py" beforeDir="false" afterPath="$PROJECT_DIR$/backjoon/20055:robot_on_convaier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backjoon/2467:a-solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/backjoon/2467:a-solution.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +29,17 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -36,11 +59,32 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/fitt/Projects/algorithm_study/python&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/fitt/Projects/algorithm_study/python/backjoon&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일&quot;: [
+      &quot;JSON&quot;
+    ]
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="12865:basic-knapsack" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backjoon" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/algorithm" />
+      <recent name="$PROJECT_DIR$/this-is-coding-test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.2805:cutting-tree">
+    <configuration name="14-LongestCommonPrefix" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -48,12 +92,100 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/programmers/backjoon" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/programmers/backjoon/12865:basic-knapsack.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/14-LongestCommonPrefix.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1706-WhereWilltheBallFall" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/1706-WhereWilltheBallFall.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="2805:cutting-tree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backjoon" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backjoon/2805:cutting-tree.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="54-Spiral Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode/54-Spiral Matrix.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sorting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/sorting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -64,7 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.12865:basic-knapsack" />
+        <item itemvalue="Python.2805:cutting-tree" />
+        <item itemvalue="Python.sorting" />
+        <item itemvalue="Python.14-LongestCommonPrefix" />
+        <item itemvalue="Python.1706-WhereWilltheBallFall" />
+        <item itemvalue="Python.54-Spiral Matrix" />
       </list>
     </recent_temporary>
   </component>
@@ -80,29 +216,383 @@
       <workItem from="1657434890150" duration="4193000" />
       <workItem from="1657515219064" duration="485000" />
       <workItem from="1657515708949" duration="73000" />
+      <workItem from="1673526274642" duration="521000" />
+      <workItem from="1673526827090" duration="321000" />
+      <workItem from="1673527205274" duration="23000" />
+      <workItem from="1673527235042" duration="35695000" />
+      <workItem from="1674279316151" duration="2113000" />
+      <workItem from="1675059754849" duration="33281000" />
+      <workItem from="1675666597992" duration="103108000" />
+      <workItem from="1677476386308" duration="25155000" />
+      <workItem from="1679276236366" duration="15545000" />
+      <workItem from="1679380181224" duration="8201000" />
+      <workItem from="1679656920167" duration="3844000" />
+      <workItem from="1679903781556" duration="57785000" />
+      <workItem from="1680232267497" duration="7504000" />
+      <workItem from="1680405675675" duration="125000" />
+      <workItem from="1680502778383" duration="10007000" />
+      <workItem from="1680588961278" duration="8778000" />
+      <workItem from="1680659797378" duration="25370000" />
+      <workItem from="1680754496924" duration="59328000" />
+      <workItem from="1681213508998" duration="29432000" />
+      <workItem from="1681448726042" duration="1704000" />
+      <workItem from="1681642527876" duration="1856000" />
+      <workItem from="1681746167537" duration="1510000" />
+      <workItem from="1682136249033" duration="476000" />
+      <workItem from="1683088139071" duration="179000" />
+      <workItem from="1683088323748" duration="3942000" />
+      <workItem from="1683092911478" duration="5644000" />
+      <workItem from="1683537455206" duration="6226000" />
+      <workItem from="1685453652061" duration="10162000" />
+      <workItem from="1685584394830" duration="711000" />
+      <workItem from="1686042390071" duration="37000" />
+      <workItem from="1686290172866" duration="5000" />
+      <workItem from="1697814682024" duration="2866000" />
     </task>
-    <task id="LOCAL-00001" summary="solve:python:백준:12865:평범한 배낭">
-      <created>1657515226391</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00053" summary="solve:python:프로그래머스:SW마에스트로 12기 지원대비 문제풀이-보석 쇼핑">
+      <created>1677656656676</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1657515226391</updated>
+      <updated>1677656656676</updated>
     </task>
-    <task id="LOCAL-00002" summary="solve:python:백준:1000:A+B">
-      <created>1657515273145</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00054" summary="solve:python:프로그래머스:SW마에스트로 12기 지원대비 문제풀이-색종이 모으기(2)">
+      <created>1677661123546</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
-      <updated>1657515273145</updated>
+      <updated>1677661123546</updated>
     </task>
-    <task id="LOCAL-00003" summary="설정파일">
-      <created>1657515740982</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00055" summary="solve:python:프로그래머스:SW마에스트로 12기 지원대비 문제풀이-섬 연결하기">
+      <created>1677739901653</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
-      <updated>1657515740982</updated>
+      <updated>1677739901653</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00056" summary="solve:python:프로그래머스:SW마에스트로 12기 지원대비 문제풀이-숫자게임">
+      <created>1677742097679</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1677742097679</updated>
+    </task>
+    <task id="LOCAL-00057" summary="solve:python:프로그래머스:SW마에스트로 12기 지원대비 문제풀이-[카카오 인턴] 경주로 건설">
+      <created>1677766231207</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1677766231207</updated>
+    </task>
+    <task id="LOCAL-00058" summary="solve:python:프로그래머스:SW마에스트로 12기 지원대비 문제풀이-숫자 게임">
+      <created>1677766245370</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1677766245370</updated>
+    </task>
+    <task id="LOCAL-00059" summary="solve:python:백준:14503:로봇청소기">
+      <created>1679280520315</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1679280520316</updated>
+    </task>
+    <task id="LOCAL-00060" summary="solve:python:백준:20056:마법사 상어와 파이어볼">
+      <created>1679289507939</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1679289507939</updated>
+    </task>
+    <task id="LOCAL-00061" summary="solve:python:백준:21608:상어 초등학교">
+      <created>1679387715017</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1679387715017</updated>
+    </task>
+    <task id="LOCAL-00062" summary="solve:python:백준:14889:스타트와 링크">
+      <created>1679387734009</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1679387734010</updated>
+    </task>
+    <task id="LOCAL-00063" summary="solve:python:백준:14499:주사위 굴리기">
+      <created>1679660172700</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1679660172701</updated>
+    </task>
+    <task id="LOCAL-00064" summary="solve:python:백준:3190:뱀">
+      <created>1679906781154</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1679906781155</updated>
+    </task>
+    <task id="LOCAL-00065" summary="solve:python:백준:14890:경사로">
+      <created>1679916158937</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1679916158937</updated>
+    </task>
+    <task id="LOCAL-00066" summary="solve:python:백준:14891:톱니바퀴">
+      <created>1679990417309</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1679990417309</updated>
+    </task>
+    <task id="LOCAL-00067" summary="solve:python:백준:15686:치킨 배달">
+      <created>1680019395119</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1680019395119</updated>
+    </task>
+    <task id="LOCAL-00068" summary="solve:python:백준:15683:감시">
+      <created>1680060827182</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1680060827182</updated>
+    </task>
+    <task id="LOCAL-00069" summary="solve:python:백준:14500:tetrimino">
+      <created>1680102049974</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1680102049974</updated>
+    </task>
+    <task id="LOCAL-00070" summary="solve:python:백준:20055:미세먼지 안녕!">
+      <created>1680168196388</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1680168196388</updated>
+    </task>
+    <task id="LOCAL-00071" summary="solve:python:백준:14891:톱니바퀴">
+      <created>1680168241384</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1680168241384</updated>
+    </task>
+    <task id="LOCAL-00072" summary="solve:python:백준:17144:미세먼지 안녕!">
+      <created>1680168279429</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1680168279429</updated>
+    </task>
+    <task id="LOCAL-00073" summary="solve:python:백준:14501:퇴사">
+      <created>1680168311899</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1680168311899</updated>
+    </task>
+    <task id="LOCAL-00074" summary="solve:python:백준:14500:테트리미노">
+      <created>1680168342065</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1680168342065</updated>
+    </task>
+    <task id="LOCAL-00075" summary="solve:python:백준:17825:주사위 윷놀이">
+      <created>1680261570768</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1680261570768</updated>
+    </task>
+    <task id="LOCAL-00076" summary="solve:python:백준:20057:마법사 상어와 토네이도">
+      <created>1680511908451</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1680511908452</updated>
+    </task>
+    <task id="LOCAL-00077" summary="solve:python:백준:17104:이차원 배열과 연산">
+      <created>1680598098441</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1680598098442</updated>
+    </task>
+    <task id="LOCAL-00078" summary="solve:python:백준:20058:마법사 상어와 파이어스톰">
+      <created>1680667728160</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1680667728160</updated>
+    </task>
+    <task id="LOCAL-00079" summary="solve:python:백준:21610:마법사 상어와 비바라기">
+      <created>1680769186794</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1680769186795</updated>
+    </task>
+    <task id="LOCAL-00080" summary="solve:python:백준:17070:파이프 옮기기 1">
+      <created>1680853293073</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1680853293073</updated>
+    </task>
+    <task id="LOCAL-00081" summary="solve:python:백준:2477:차량 정비소">
+      <created>1680870775776</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1680870775776</updated>
+    </task>
+    <task id="LOCAL-00082" summary="solve:python:백준:17406:배열 돌리기4">
+      <created>1680881801963</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1680881801963</updated>
+    </task>
+    <task id="LOCAL-00083" summary="solve:python:백준:23289:온풍기 안녕!">
+      <created>1680882867931</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1680882867931</updated>
+    </task>
+    <task id="LOCAL-00084" summary="solve:python:백준:17281:야구 ⚾">
+      <created>1680934001880</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1680934001881</updated>
+    </task>
+    <task id="LOCAL-00085" summary="solve:python:백준:17471:게리맨더링">
+      <created>1680940921499</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1680940921499</updated>
+    </task>
+    <task id="LOCAL-00086" summary="solve:python:프로그래머스:퍼즐 조각 채우기">
+      <created>1681224228217</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1681224228218</updated>
+    </task>
+    <task id="LOCAL-00087" summary="solve:python:백준:2467:용액">
+      <created>1681232665421</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1681232665421</updated>
+    </task>
+    <task id="LOCAL-00088" summary="solve:python:백준:2473:세 용액">
+      <created>1681279948347</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1681279948347</updated>
+    </task>
+    <task id="LOCAL-00089" summary="solve:python:백준:11053:가장 긴 증가하는 부분수열">
+      <created>1681286629306</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1681286629306</updated>
+    </task>
+    <task id="LOCAL-00090" summary="solve:python:백준:11053:가장 긴 증가하는 부분수열">
+      <created>1681300630465</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1681300630465</updated>
+    </task>
+    <task id="LOCAL-00091" summary="solve:python:백준:12015:가장 긴 증가하는 부분수열2">
+      <created>1681351185716</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1681351185716</updated>
+    </task>
+    <task id="LOCAL-00092" summary="solve:python:백준:1967:최단경로">
+      <created>1681364183582</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1681364183582</updated>
+    </task>
+    <task id="LOCAL-00093" summary="solve:python:백준:1735:최단경로">
+      <created>1681450425886</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1681450425886</updated>
+    </task>
+    <task id="LOCAL-00094" summary="solve:python:백준:1629:곱셈">
+      <created>1681643789533</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1681643789534</updated>
+    </task>
+    <task id="LOCAL-00095" summary="solve:python:leetcode:54:Spiral Matrix">
+      <created>1683094080274</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1683094080274</updated>
+    </task>
+    <task id="LOCAL-00096" summary="solve:python:leetcode:1706:WhereWilltheBallFall">
+      <created>1683095655270</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1683095655270</updated>
+    </task>
+    <task id="LOCAL-00097" summary="solve:python:leetcode:14:LongestCommonPrefix">
+      <created>1683540287722</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1683540287723</updated>
+    </task>
+    <task id="LOCAL-00098" summary="solve:python:leetcode:43:MultiplyString">
+      <created>1683541978544</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1683541978544</updated>
+    </task>
+    <task id="LOCAL-00099" summary="solve:python:leetcode:19:Remove Nth Node From End of List">
+      <created>1683542045981</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1683542045981</updated>
+    </task>
+    <task id="LOCAL-00100" summary="solve:python:sort">
+      <created>1685584503458</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1685584503459</updated>
+    </task>
+    <task id="LOCAL-00101" summary="solve:python:2805:cutting-tree">
+      <created>1697816065929</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1697816065930</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,12 +610,213 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="solve:python:백준:12865:평범한 배낭" />
-    <MESSAGE value="solve:python:백준:1000:A+B" />
-    <MESSAGE value="설정파일" />
-    <option name="LAST_COMMIT_MESSAGE" value="설정파일" />
+    <MESSAGE value="solve:python:백준:20057:마법사 상어와 토네이도" />
+    <MESSAGE value="solve:python:백준:17104:이차원 배열과 연산" />
+    <MESSAGE value="solve:python:백준:20058:마법사 상어와 파이어스톰" />
+    <MESSAGE value="solve:python:백준:21610:마법사 상어와 비바라기" />
+    <MESSAGE value="solve:python:백준:17070:파이프 옮기기 1" />
+    <MESSAGE value="solve:python:백준:2477:차량 정비소" />
+    <MESSAGE value="solve:python:백준:17406:배열 돌리기4" />
+    <MESSAGE value="solve:python:백준:23289:온풍기 안녕!" />
+    <MESSAGE value="solve:python:백준:17281:야구 ⚾" />
+    <MESSAGE value="solve:python:백준:17471:게리맨더링" />
+    <MESSAGE value="solve:python:프로그래머스:퍼즐 조각 채우기" />
+    <MESSAGE value="solve:python:백준:2467:용액" />
+    <MESSAGE value="solve:python:백준:2473:세 용액" />
+    <MESSAGE value="solve:python:백준:11053:가장 긴 증가하는 부분수열" />
+    <MESSAGE value="solve:python:백준:12015:가장 긴 증가하는 부분수열2" />
+    <MESSAGE value="solve:python:백준:1967:최단경로" />
+    <MESSAGE value="solve:python:백준:1735:최단경로" />
+    <MESSAGE value="solve:python:백준:1629:곱셈" />
+    <MESSAGE value="solve:python:leetcode:54:Spiral Matrix" />
+    <MESSAGE value="solve:python:leetcode:1706:WhereWilltheBallFall" />
+    <MESSAGE value="solve:python:leetcode:14:LongestCommonPrefix" />
+    <MESSAGE value="solve:python:leetcode:43:MultiplyString" />
+    <MESSAGE value="solve:python:leetcode:19:Remove Nth Node From End of List" />
+    <MESSAGE value="solve:python:sort" />
+    <MESSAGE value="solve:python:2805:cutting-tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="solve:python:2805:cutting-tree" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/this-is-coding-test/7-binary-search/2-making-ricecake.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/this-is-coding-test/7-binary-search/2-making-ricecake.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/this-is-coding-test/8-dynamic-programming/2-ant-warrior.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/this-is-coding-test/8-dynamic-programming/4-effective-money-composition.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/21608:shark-elementary-school.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/14499:roll-dice.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/14890:ramp.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/20056:shark-wizard-and-fireball.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/20058:shark-wizard-and-firestorm.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/codetree/santa-gift-factory2.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/17070:moving-pipe.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/17070:moving-pipe.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/swac/2477.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/2473:three-solutions.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/11053:longest-increase-subsequence.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/12015:longest-increase-subsequence2.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backjoon/1967:diameter_of_tree.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/python$2174_robot_simul.coverage" NAME="2174:robot-simul 커버리지 결과" MODIFIED="1677130913844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$3190_snake.coverage" NAME="3190:snake 커버리지 결과" MODIFIED="1679906699258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$1735_shortest_path.coverage" NAME="1735:shortest-path 커버리지 결과" MODIFIED="1681449936448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$20_.coverage" NAME="20- 커버리지 결과" MODIFIED="1676965461528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$23_gukyeongsu.coverage" NAME="23-gukyeongsu 커버리지 결과" MODIFIED="1677074949769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
     <SUITE FILE_PATH="coverage/python$12865_basic_knapsack.coverage" NAME="12865:basic-knapsack 커버리지 결과" MODIFIED="1657438391356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/programmers/backjoon" />
+    <SUITE FILE_PATH="coverage/python$freezing_juice.coverage" NAME="freezing-juice 커버리지 결과" MODIFIED="1675065898927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/5-dfsbfs" />
+    <SUITE FILE_PATH="coverage/python$14499_roll_dice.coverage" NAME="14499:roll-dice 커버리지 결과" MODIFIED="1679659814000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$14890_ramp.coverage" NAME="14890:ramp 커버리지 결과" MODIFIED="1679912344355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$2473_three_solutions.coverage" NAME="2473:three-solutions 커버리지 결과" MODIFIED="1681281743947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$2_number_card_game.coverage" NAME="2-number-card-game 커버리지 결과" MODIFIED="1673846616177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/3-greedy" />
+    <SUITE FILE_PATH="coverage/python$14891_gear.coverage" NAME="14891:gear 커버리지 결과" MODIFIED="1679990206453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$9095_sum_1_2_3.coverage" NAME="9095:sum-1-2-3 커버리지 결과" MODIFIED="1677116961759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$sorting.coverage" NAME="sorting 커버리지 결과" MODIFIED="1685466226621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/python$17135_castle_defence.coverage" NAME="17135:castle-defence 커버리지 결과" MODIFIED="1677648195574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$2_telegram.coverage" NAME="2-telegram 커버리지 결과" MODIFIED="1675831176700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/9-shortest-path" />
+    <SUITE FILE_PATH="coverage/python$8_string_re_sort.coverage" NAME="8-string-re-sort 커버리지 결과" MODIFIED="1676352868711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$1_find_parts.coverage" NAME="1-find-parts 커버리지 결과" MODIFIED="1675224217292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/7-binary-search" />
+    <SUITE FILE_PATH="coverage/python$14500_tetrimino.coverage" NAME="14500:tetrimino 커버리지 결과" MODIFIED="1680102026955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$20055_robot_on_convaier.coverage" NAME="20055:robot_on_convaier 커버리지 결과" MODIFIED="1680261099844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$1967_diameter_of_tree.coverage" NAME="1967:diameter_of_tree 커버리지 결과" MODIFIED="1681362642028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$4_effective_money_composition.coverage" NAME="4-effective-money-composition 커버리지 결과" MODIFIED="1675668749260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/8-dynamic-programming" />
+    <SUITE FILE_PATH="coverage/python$1_future_city.coverage" NAME="1-future-city 커버리지 결과" MODIFIED="1675826912312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/9-shortest-path" />
+    <SUITE FILE_PATH="coverage/python$pick_bowlling_ball.coverage" NAME="5-pick_bowlling_ball 커버리지 결과" MODIFIED="1676270632156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$21608_shark_elementary_school.coverage" NAME="21608:shark-elementary-school 커버리지 결과" MODIFIED="1679384175945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$2805_cutting_tree.coverage" NAME="2805:cutting-tree 커버리지 결과" MODIFIED="1697815921935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$1_adventurer_guild.coverage" NAME="1-adventurer-guild 커버리지 결과" MODIFIED="1675926629585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$15650_NandM2.coverage" NAME="15650:NandM2 커버리지 결과" MODIFIED="1677205656700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$1_top_to_down.coverage" NAME="1-top-to-down 커버리지 결과" MODIFIED="1675135621181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/6-sort" />
+    <SUITE FILE_PATH="coverage/python$1629_multiply.coverage" NAME="1629:multiply 커버리지 결과" MODIFIED="1681643648486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$14503_robot_cleaner.coverage" NAME="14503:robot-cleaner 커버리지 결과" MODIFIED="1679280315472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$20058_shark_wizard_and_firestorm.coverage" NAME="20058:shark-wizard-and-firestorm 커버리지 결과" MODIFIED="1680667374226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$santa_gift_factory2.coverage" NAME="santa-gift-factory2 커버리지 결과" MODIFIED="1680800819090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codetree" />
+    <SUITE FILE_PATH="coverage/python$1_up_down_left_right.coverage" NAME="1-up-down-left-right 커버리지 결과" MODIFIED="1674012154655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/4-implements" />
+    <SUITE FILE_PATH="coverage/python$4_game_develop.coverage" NAME="4-game-develop 커버리지 결과" MODIFIED="1675060759794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/4-implements" />
+    <SUITE FILE_PATH="coverage/python$2477.coverage" NAME="2477 커버리지 결과" MODIFIED="1680870473292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/swac" />
+    <SUITE FILE_PATH="coverage/python$17406_spin_array_4.coverage" NAME="17406:spin-array-4 커버리지 결과" MODIFIED="1680881430497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$10_lock_and_key.coverage" NAME="10-lock-and-key 커버리지 결과" MODIFIED="1676450663054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$2467_a_solution.coverage" NAME="2467:a-solution 커버리지 결과" MODIFIED="1681282398375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$2_print_student_score.coverage" NAME="2-print-student-score 커버리지 결과" MODIFIED="1675222626367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/6-sort" />
+    <SUITE FILE_PATH="coverage/python$17471_garry_mandering.coverage" NAME="17471:garry-mandering 커버리지 결과" MODIFIED="1680940820512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$3_until_being_1.coverage" NAME="3-until-being-1 커버리지 결과" MODIFIED="1673846626347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/3-greedy" />
+    <SUITE FILE_PATH="coverage/python$17_compititionly_virus.coverage" NAME="17-compititionly-virus 커버리지 결과" MODIFIED="1676891033224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$3_knight_of_holy_family.coverage" NAME="3-knight-of-holy-family 커버리지 결과" MODIFIED="1674280122784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/4-implements" />
+    <SUITE FILE_PATH="coverage/python$17825_dice_yut_nori.coverage" NAME="17825:dice_yut_nori 커버리지 결과" MODIFIED="1680152162727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$21610_shark_wizrd_and_rainthirster.coverage" NAME="21610:shark-wizrd-and-rainthirster 커버리지 결과" MODIFIED="1680758348486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$2_multi_or_sum.coverage" NAME="2-multi-or-sum 커버리지 결과" MODIFIED="1675934877269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$15686.coverage" NAME="15686:chicken_delivery 커버리지 결과" MODIFIED="1680018012739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$1_making_to_one.coverage" NAME="1-making-to-one 커버리지 결과" MODIFIED="1675319863400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/8-dynamic-programming" />
+    <SUITE FILE_PATH="coverage/python$2579_go_upstair.coverage" NAME="2579:go-upstair 커버리지 결과" MODIFIED="1677114989289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$1_rule_of_big_num.coverage" NAME="1-rule-of-big-num 커버리지 결과" MODIFIED="1673576842084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/3-greedy" />
+    <SUITE FILE_PATH="coverage/python$2_ant_warrior.coverage" NAME="2-ant-warrior 커버리지 결과" MODIFIED="1675402705933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/8-dynamic-programming" />
+    <SUITE FILE_PATH="coverage/python$0_dijkstra.coverage" NAME="0-dijkstra 커버리지 결과" MODIFIED="1675755261365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/9-shortest-path" />
+    <SUITE FILE_PATH="coverage/python$20056_shark_wizard_and_fireball.coverage" NAME="20056:shark-wizard-and-fireball 커버리지 결과" MODIFIED="1679289214707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$scratch.coverage" NAME="scratch 커버리지 결과" MODIFIED="1681746329547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/python$4_cost_cant_make.coverage" NAME="4-cost-cant-make 커버리지 결과" MODIFIED="1676007918322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$17140_double_array_and_calc.coverage" NAME="17140:double-array-and-calc 커버리지 결과" MODIFIED="1680596530684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$test.coverage" NAME="test 커버리지 결과" MODIFIED="1681362006096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/python$17070_moving_pipe.coverage" NAME="17070:moving-pipe 커버리지 결과" MODIFIED="1680852874725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$6_muji_muckbang_live.coverage" NAME="6-muji-muckbang-live 커버리지 결과" MODIFIED="1676277831404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$16_labatory.coverage" NAME="16-labatory 커버리지 결과" MODIFIED="1676700094194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$15683_observe.coverage" NAME="15683:observe 커버리지 결과" MODIFIED="1680059716436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$11053_longest_increase_subsequence.coverage" NAME="11053:longest-increase-subsequence 커버리지 결과" MODIFIED="1681288513229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$14_LongestCommonPrefix.coverage" NAME="14-LongestCommonPrefix 커버리지 결과" MODIFIED="1685459309207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leetcode" />
+    <SUITE FILE_PATH="coverage/python$15_find_city_of_fixed_distance.coverage" NAME="15-find-city-of-fixed-distance 커버리지 결과" MODIFIED="1676602599274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$0_floyd_warshall.coverage" NAME="0-floyd-warshall 커버리지 결과" MODIFIED="1675757944832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/9-shortest-path" />
+    <SUITE FILE_PATH="coverage/python$3_swap_two_array_element.coverage" NAME="3-swap-two-array-element 커버리지 결과" MODIFIED="1675222629826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/6-sort" />
+    <SUITE FILE_PATH="coverage/python$54_Spiral_Matrix.coverage" NAME="54-Spiral Matrix 커버리지 결과" MODIFIED="1683093014853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leetcode" />
+    <SUITE FILE_PATH="coverage/python$2_making_ricecake.coverage" NAME="2-making-ricecake 커버리지 결과" MODIFIED="1675317288107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/7-binary-search" />
+    <SUITE FILE_PATH="coverage/python$3_floor_construction.coverage" NAME="3-floor-construction 커버리지 결과" MODIFIED="1675668241056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/8-dynamic-programming" />
+    <SUITE FILE_PATH="coverage/python$1463_making_1.coverage" NAME="1463:making-1 커버리지 결과" MODIFIED="1677113432295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$1706_WhereWilltheBallFall.coverage" NAME="1706-WhereWilltheBallFall 커버리지 결과" MODIFIED="1683095429400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leetcode" />
+    <SUITE FILE_PATH="coverage/python$9_compress_string.coverage" NAME="9-compress-string 커버리지 결과" MODIFIED="1676444166855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$3_reverse_string.coverage" NAME="3-reverse-string 커버리지 결과" MODIFIED="1676001568317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$23289_bye_onpungi.coverage" NAME="23289:bye-onpungi 커버리지 결과" MODIFIED="1680686900677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$17281_baseball.coverage" NAME="17281:baseball 커버리지 결과" MODIFIED="1680933717032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$12015_longest_increase_subsequence2.coverage" NAME="12015:longest-increase-subsequence2 커버리지 결과" MODIFIED="1681351074830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$15683_1_observe.coverage" NAME="15683-1:observe 커버리지 결과" MODIFIED="1680063083934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$20057_shark_wizard_and_fireball.coverage" NAME="20057:shark-wizard-and-fireball 커버리지 결과" MODIFIED="1680510503251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$14889_start_and_link.coverage" NAME="14889:start_and_link 커버리지 결과" MODIFIED="1679386334890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$19_put_operator_between.coverage" NAME="19-put-operator-between 커버리지 결과" MODIFIED="1676893838058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$17271_leagueoflegenser.coverage" NAME="17271:leagueoflegenser 커버리지 결과" MODIFIED="1677133507168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$2_time.coverage" NAME="2-time 커버리지 결과" MODIFIED="1674012157739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/4-implements" />
+    <SUITE FILE_PATH="coverage/python$triangle_snail.coverage" NAME="triangle-snail 커버리지 결과" MODIFIED="1677479236523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/programmers/level2" />
+    <SUITE FILE_PATH="coverage/python$base_station_install.coverage" NAME="base-station-install 커버리지 결과" MODIFIED="1677567359521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/programmers/level3" />
+    <SUITE FILE_PATH="coverage/python$17144_bye_micro_dust.coverage" NAME="17144:bye_micro_dust 커버리지 결과" MODIFIED="1680168126029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
+    <SUITE FILE_PATH="coverage/python$21_moving_population.coverage" NAME="21-moving-population 커버리지 결과" MODIFIED="1677073524152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$7_lucky_straight.coverage" NAME="7-lucky-straight 커버리지 결과" MODIFIED="1676351861076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/this-is-coding-test/11-past-questions" />
+    <SUITE FILE_PATH="coverage/python$1260_bfs_dfs.coverage" NAME="1260:bfs-dfs 커버리지 결과" MODIFIED="1677141005304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backjoon" />
   </component>
 </project>
