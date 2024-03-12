@@ -1,3 +1,8 @@
+# 오답노트
+
+# 아이디어는 어케저케 뽑았는데 투포인터 구현하는데 꽤 오래걸림..
+# 걍 투포인터 이동할 때 좌우 이동 어느정도 패딩 두고 로직 돌려도 이상 없으니까 넉넉하게 생각하자!
+
 # 소수의 연속 합
 import math
 
@@ -29,9 +34,6 @@ def check(n):
   global res
   # print("check", n)
   if n == N: res += 1
-  
-
-
 
   # 가장 왼쪽에 lp 그 옆에 rp 시작
   
@@ -58,40 +60,4 @@ while lp <primesLen:
     check(rangeSum)
       
 print(res)
-  
-
-
-
-# while True:
-#   rangeSum += primes[lp]
-#   if(rangeSum == N): res += 1
-  
-#   # 항상 lp <= rp
-  
-#   if(rangeSum < N): # N보다 작을 때 rp 증가시킴
-#     rp += 1
-#     rangeSum += primes[rp]
-#     check(rangeSum)
-    
-#     if rangeSum >= N: # N보다 커진 경우에 lp 증가, rp 감소
-#       #lp 증가
-#       rangeSum -= primes[lp]
-#       check(rangeSum)
-#       lp += 1
-#       #rp 감소
-      
-    
-
-    
-
-    
-    
-    
-    
-  # else: # N보다 클 때 rp 감소시킴
-  #   rangeSum -= primes[rp]
-  #   rp -= 1
-  #   if rangeSum < N: #N
-      
-  
   
